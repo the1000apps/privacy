@@ -33,7 +33,11 @@
   }
   * { box-sizing: border-box; }
   body { background: var(--bg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; line-height: 1.6; color: var(--fg); }
+  .topbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
   .kicker { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .langswitch { display: flex; gap: 0.4rem; margin-bottom: 0.5rem; }
+  .lang-btn { font: inherit; font-size: 0.8rem; font-weight: 600; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 0.25rem 0.8rem; cursor: pointer; }
+  .lang-btn[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
   h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
   .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
   h2 { font-size: 1.25rem; margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
@@ -51,7 +55,16 @@
 </head>
 <body>
 
-<span class="kicker">the1000apps</span>
+<div class="topbar">
+  <span class="kicker">the1000apps</span>
+  <span class="langswitch" role="group" aria-label="Language / Idioma">
+    <button type="button" id="btn-en" class="lang-btn" aria-pressed="false">EN</button>
+    <button type="button" id="btn-pt" class="lang-btn" aria-pressed="false">PT-BR</button>
+  </span>
+</div>
+
+<div id="content-en" lang="en" hidden>
+
 <h1>Privacy Policy</h1>
 <p class="updated">Publisher: the1000apps &middot; Last updated: September 16, 2026</p>
 
@@ -133,6 +146,133 @@
 
 <h2>Contact</h2>
 <p>Questions about this policy or any of the Apps? Email <a href="mailto:breno@protiv.com">breno@protiv.com</a>.</p>
+
+</div>
+
+<div id="content-pt" lang="pt-BR" hidden>
+
+<h1>Política de Privacidade</h1>
+<p class="updated">Publicado por: the1000apps &middot; Última atualização: 16 de setembro de 2026</p>
+
+<p>Esta política de privacidade se aplica a todos os aplicativos Android publicados pela <strong>the1000apps</strong> (os "Apps"), listados abaixo. Construímos esses Apps para serem utilitários simples, que funcionam offline. Não exigimos conta, não operamos servidores próprios, e não coletamos nem vendemos informação pessoal além do que está descrito aqui.</p>
+
+<h2>Apps cobertos por esta política</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Aplicativo</th><th>O que faz</th><th>Permissões de dispositivo que pode solicitar</th></tr>
+<tr><td>Mirror</td><td>Espelho de câmera</td><td>Câmera</td></tr>
+<tr><td>Morse Signal</td><td>Tradutor e decodificador de código Morse</td><td>Câmera (lanterna/decodificação visual), Microfone (decodificação por áudio)</td></tr>
+<tr><td>CastIt</td><td>Espelhamento de tela para um navegador local</td><td>Captura de tela (MediaProjection), Notificações</td></tr>
+<tr><td>Clearcast Recorder</td><td>Gravador de voz</td><td>Microfone</td></tr>
+<tr><td>Whiskers and Paws</td><td>Identificador de raça de cão/gato</td><td>Câmera, Fotos (para escolher uma imagem existente)</td></tr>
+<tr><td>Dream Dictionary</td><td>Dicionário de símbolos de sonhos e diário</td><td>Nenhuma</td></tr>
+<tr><td>Squeeze</td><td>Compressor de foto/vídeo</td><td>Fotos/Vídeos (para escolher e salvar arquivos)</td></tr>
+<tr><td>Times Tables Practice</td><td>Prática de tabuada para crianças</td><td>Nenhuma</td></tr>
+<tr><td>Plain Metronome</td><td>Metrônomo</td><td>Nenhuma</td></tr>
+<tr><td>Signature Maker</td><td>Desenhar e inserir uma assinatura em um PDF</td><td>Fotos/Arquivos (para escolher e salvar documentos)</td></tr>
+<tr><td>Prayer Times</td><td>Horários de oração islâmicos e bússola da Qibla</td><td>Localização (para calcular horários de oração e a direção da Qibla com precisão local)</td></tr>
+<tr><td>Ringtone Maker</td><td>Cortar áudio para criar um toque</td><td>Arquivos/Áudio (para escolher um arquivo de origem), uma permissão especial "Modificar configurações do sistema" (para definir um toque)</td></tr>
+<tr><td>OCR Text Scanner</td><td>Reconhecimento de texto em fotos, direto no aparelho</td><td>Câmera, Fotos</td></tr>
+<tr><td>Meme &amp; GIF Maker</td><td>Legendar fotos e criar GIFs a partir das suas próprias fotos</td><td>Fotos</td></tr>
+<tr><td>QR Code Generator</td><td>Gerar códigos QR (texto, URL, WiFi, contato)</td><td>Arquivos (para salvar os códigos gerados)</td></tr>
+<tr><td>White Noise Sleep Sounds</td><td>Sons ambientes para dormir</td><td>Notificações (para o controle contínuo de reprodução)</td></tr>
+<tr><td>Tarot Card Reader</td><td>Tiragem diária de carta de tarô e diário</td><td>Nenhuma</td></tr>
+<tr><td>Language Flashcards</td><td>Flashcards de vocabulário com repetição espaçada</td><td>Notificações (lembretes opcionais de revisão)</td></tr>
+<tr><td>Handwriting Practice</td><td>Prática de caligrafia cursiva para adolescentes e adultos</td><td>Nenhuma</td></tr>
+<tr><td>Parking Reminder</td><td>Salvar onde você estacionou e te ajudar a voltar até lá</td><td>Localização, Câmera (foto opcional do local), Notificações (timer opcional)</td></tr>
+<tr><td>Nomes do Brasil</td><td>Explorador de nomes de bebê brasileiros, com dados oficiais do Censo 2022 (IBGE)</td><td>Nenhuma</td></tr>
+<tr><td>AI Camera</td><td>Visualizador de câmeras IP: visão ao vivo multi-câmera, gravação agendada, detecção de objetos direto no aparelho</td><td>Notificações (serviço de gravação em segundo plano)</td></tr>
+<tr><td>Obra Calc</td><td>Calculadora de quantidade de material de obra, com base na tabela oficial do SINAPI</td><td>Nenhuma</td></tr>
+</table>
+</div>
+
+<h2>O que não fazemos</h2>
+<ul>
+<li>Não exigimos que você crie uma conta ou faça login.</li>
+<li>Não operamos servidores próprios, e nenhum dos Apps envia suas fotos, gravações, desenhos ou documentos para lugar nenhum - o processamento acontece no seu aparelho, e os arquivos ficam no seu aparelho, a menos que você mesmo use a ação de "compartilhar" ou "salvar" do próprio App para enviá-los a algum lugar.</li>
+<li>Não vendemos seus dados para ninguém.</li>
+</ul>
+
+<h2>Permissões, explicadas</h2>
+<p>Cada App só solicita as permissões de dispositivo específicas de que precisa para sua função principal, listadas na tabela acima. Uma permissão só é usada para o propósito declarado na própria explicação do App, mostrada antes de o sistema pedir que você a conceda. Você pode revisar ou revogar qualquer permissão a qualquer momento em Configurações &gt; Apps do seu aparelho.</p>
+
+<h3>Localização (Prayer Times, Parking Reminder)</h3>
+<p><strong>Prayer Times</strong> usa a localização do seu aparelho para calcular horários de oração e a direção da Qibla precisos para onde você está; se preferir não compartilhar a localização do aparelho, você pode digitar uma localização manualmente. <strong>Parking Reminder</strong> usa sua localização só quando você toca explicitamente em "Salvar meu local", para lembrar onde você estacionou - ele não rastreia sua localização em segundo plano nem em nenhum outro momento. Em ambos os Apps, os dados de localização são usados inteiramente no aparelho para o cálculo mostrado a você, e nunca são enviados para nós ou para qualquer servidor que operamos.</p>
+
+<h3>"Modificar configurações do sistema" (Ringtone Maker)</h3>
+<p>O Ringtone Maker solicita a permissão especial do Android "Modificar configurações do sistema" (<code>WRITE_SETTINGS</code>) só para permitir que você defina um trecho exportado como toque, som de notificação ou som de alarme do seu aparelho, quando você toca nesse botão específico. Ela não é usada para mais nada, e o Android exige que você aprove essa permissão explicitamente pela própria tela do sistema antes que ela tenha efeito.</p>
+
+<h3>Conexões com câmeras IP (AI Camera)</h3>
+<p>O AI Camera se conecta diretamente a câmeras IP/de segurança na sua própria rede local (o mesmo Wi-Fi do seu celular) para mostrar uma visão ao vivo e gravar no armazenamento do próprio aparelho ou no cartão SD. Endereços de câmera e quaisquer credenciais que você digitar para se conectar a elas ficam salvos só no seu aparelho. Os streams de vídeo e as gravações são processados e armazenados inteiramente no aparelho - o AI Camera não tem backend na nuvem, e nada é enviado para nós ou para qualquer servidor que operamos.</p>
+
+<h2>Publicidade</h2>
+<p>Esses Apps são gratuitos e mantidos por anúncios veiculados pelo <strong>Google AdMob</strong>. Para exibir anúncios, o SDK do AdMob do Google pode coletar e processar, em nosso nome:</p>
+<ul>
+<li>Identificadores de publicidade (como o seu Android Advertising ID)</li>
+<li>Informações gerais do aparelho e do app (modelo do aparelho, versão do sistema, versão do app, região aproximada), usadas para entrega de anúncios e prevenção de fraude</li>
+<li>Dados de interação com anúncios (impressões, cliques), usados para medir desempenho</li>
+</ul>
+<p>Não controlamos como o Google coleta ou usa esses dados além do necessário para exibir anúncios no App. Você pode conferir as práticas do próprio Google em <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>, e ver a divulgação de dados específica do AdMob em <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a>. Você pode desativar a publicidade personalizada/por interesse em Configurações &gt; Google &gt; Anúncios do seu aparelho, ou redefinindo/excluindo seu identificador de publicidade.
+
+<div class="note">
+<strong>Times Tables Practice</strong> foi feito para crianças praticando tabuada. De acordo com a Política para Famílias do Google Play, os anúncios exibidos nesse App específico são veiculados em uma configuração não personalizada e apropriada para crianças - sem personalização de anúncio baseada em perfil de usuário ou comportamento entre apps, e sem formatos de anúncio voltados para público adulto. Se você acredita que anúncios personalizados estão aparecendo nesse App, entre em contato conosco pelos dados abaixo.
+</div>
+
+<h2>Dados que NÃO coletamos</h2>
+<p>Além dos dados de veiculação de anúncios descritos acima, não coletamos: seu nome, e-mail, contatos, dados de saúde ou informações financeiras, em nenhum App. Também não coletamos o conteúdo de nada que você cria, grava, desenha, captura ou digitaliza nesses Apps. Os arquivos locais criados pelos Apps (gravações, assinaturas salvas, mídia comprimida, entradas de diário de sonhos, histórico de digitalizações, entradas de diário de tarô, baralhos de flashcards, locais de estacionamento salvos, gravações de câmera de segurança, nomes de bebê curtidos, listas de material de obra salvas) ficam armazenados só no seu próprio aparelho, no armazenamento privado do próprio App ou onde você explicitamente escolheu salvá-los. Como observado acima, Prayer Times e Parking Reminder usam a localização do seu aparelho, mas só para calcular algo mostrado a você no próprio aparelho (horários de oração/direção da Qibla, ou seu local de estacionamento salvo) - esses dados de localização nunca são enviados para nós ou para qualquer servidor que operamos.</p>
+
+<h2>Privacidade infantil</h2>
+<p>O Times Tables Practice pode ser usado por crianças. Não coletamos intencionalmente nenhuma informação pessoal de crianças em nenhum dos nossos Apps. A veiculação de anúncios nesse App segue a Política para Famílias do Google Play, como descrito acima. Se você é pai, mãe ou responsável e acredita que seu filho nos forneceu informação pessoal, entre em contato conosco e trataremos o caso prontamente.</p>
+
+<h2>Segurança dos dados</h2>
+<p>Como nenhum dos Apps transmite seus arquivos ou conteúdo para qualquer servidor que operamos, a principal fronteira de segurança é o seu próprio aparelho. Recomendamos manter o sistema do seu aparelho atualizado e usar bloqueio de tela.</p>
+
+<h2>Mudanças nesta política</h2>
+<p>Podemos atualizar esta política conforme os Apps evoluem. Mudanças relevantes serão refletidas atualizando a data de "Última atualização" acima. Continuar usando um App depois de uma mudança significa que você aceita a política atualizada.</p>
+
+<h2>Contato</h2>
+<p>Dúvidas sobre esta política ou sobre qualquer um dos Apps? Envie um e-mail para <a href="mailto:breno@protiv.com">breno@protiv.com</a>.</p>
+
+</div>
+
+<noscript>
+<style>#content-en { display: block !important; }</style>
+</noscript>
+
+<script>
+(function () {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btnEn = document.getElementById('btn-en');
+  var btnPt = document.getElementById('btn-pt');
+
+  function setLang(lang, persist) {
+    var isPt = lang === 'pt';
+    en.hidden = isPt;
+    pt.hidden = !isPt;
+    document.documentElement.lang = isPt ? 'pt-BR' : 'en';
+    document.title = isPt ? 'the1000apps — Política de Privacidade' : 'the1000apps — Privacy Policy';
+    btnEn.setAttribute('aria-pressed', String(!isPt));
+    btnPt.setAttribute('aria-pressed', String(isPt));
+    if (persist) {
+      try { localStorage.setItem('privacyLang', lang); } catch (e) {}
+    }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem('privacyLang'); } catch (e) {}
+
+  if (saved === 'en' || saved === 'pt') {
+    setLang(saved, false);
+  } else {
+    var nav = (navigator.language || (navigator.languages && navigator.languages[0]) || '').toLowerCase();
+    setLang(nav.indexOf('pt') === 0 ? 'pt' : 'en', false);
+  }
+
+  btnEn.addEventListener('click', function () { setLang('en', true); });
+  btnPt.addEventListener('click', function () { setLang('pt', true); });
+})();
+</script>
 
 </body>
 </html>
