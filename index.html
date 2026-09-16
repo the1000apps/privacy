@@ -5,28 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>the1000apps — Privacy Policy</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; line-height: 1.6; color: #1a1a1a; }
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --border: #ddd;
+    --accent: #1a56db;
+    --th-bg: #f5f5f5;
+    --row-alt: #fafafa;
+    --code-bg: #f2f2f2;
+    --note-bg: #fff8e1;
+    --note-border: #f0ad4e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15171b;
+      --fg: #e8e8e8;
+      --muted: #9aa0a6;
+      --border: #33363c;
+      --accent: #7aa2ff;
+      --th-bg: #1e2126;
+      --row-alt: #1a1c20;
+      --code-bg: #23262c;
+      --note-bg: #2a2410;
+      --note-border: #caa53d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; line-height: 1.6; color: var(--fg); }
+  .kicker { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
   h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-  .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
-  h2 { font-size: 1.25rem; margin-top: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.4rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
   h3 { font-size: 1.05rem; margin-top: 1.5rem; }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
-  th, td { border: 1px solid #ddd; padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
-  th { background: #f5f5f5; }
-  code { background: #f2f2f2; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.9em; }
-  .note { background: #fff8e1; border-left: 4px solid #f0ad4e; padding: 0.9rem 1.1rem; margin: 1rem 0; font-size: 0.95rem; }
-  a { color: #1a56db; }
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  th, td { border: 1px solid var(--border); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: var(--th-bg); position: sticky; top: 0; }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  code { background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.9em; }
+  .note { background: var(--note-bg); border-left: 4px solid var(--note-border); padding: 0.9rem 1.1rem; margin: 1rem 0; font-size: 0.95rem; }
+  a { color: var(--accent); }
   ul { padding-left: 1.3rem; }
 </style>
 </head>
 <body>
 
+<span class="kicker">the1000apps</span>
 <h1>Privacy Policy</h1>
-<p class="updated">Publisher: the1000apps &middot; Last updated: July 31, 2026</p>
+<p class="updated">Publisher: the1000apps &middot; Last updated: September 16, 2026</p>
 
 <p>This privacy policy applies to all Android applications published by <strong>the1000apps</strong> (the "Apps"), listed below. We built these Apps to be simple, offline-first utilities. We do not require an account, do not run our own servers, and do not collect or sell personal information beyond what is described here.</p>
 
 <h2>Apps covered by this policy</h2>
+<div class="table-wrap">
 <table>
 <tr><th>App</th><th>What it does</th><th>Device permissions it may request</th></tr>
 <tr><td>Mirror</td><td>Camera mirror</td><td>Camera</td></tr>
@@ -40,7 +72,7 @@
 <tr><td>Plain Metronome</td><td>Metronome</td><td>None</td></tr>
 <tr><td>Signature Maker</td><td>Draw and insert a signature into a PDF</td><td>Photos/Files (to pick and save documents)</td></tr>
 <tr><td>Prayer Times</td><td>Islamic prayer times &amp; Qibla compass</td><td>Location (to calculate accurate local prayer times and Qibla direction)</td></tr>
-<tr><td>Ringtone Maker</td><td>Trim audio into a ringtone</td><td>Files/Audio (to pick a source file), a special \"Modify system settings\" permission (to set a ringtone)</td></tr>
+<tr><td>Ringtone Maker</td><td>Trim audio into a ringtone</td><td>Files/Audio (to pick a source file), a special "Modify system settings" permission (to set a ringtone)</td></tr>
 <tr><td>OCR Text Scanner</td><td>On-device text recognition from photos</td><td>Camera, Photos</td></tr>
 <tr><td>Meme &amp; GIF Maker</td><td>Caption photos and make GIFs from your own photos</td><td>Photos</td></tr>
 <tr><td>QR Code Generator</td><td>Generate QR codes (text, URL, WiFi, contact)</td><td>Files (to save generated codes)</td></tr>
@@ -49,7 +81,11 @@
 <tr><td>Language Flashcards</td><td>Spaced-repetition vocabulary flashcards</td><td>Notifications (optional review reminders)</td></tr>
 <tr><td>Handwriting Practice</td><td>Cursive/penmanship practice for teens &amp; adults</td><td>None</td></tr>
 <tr><td>Parking Reminder</td><td>Save your parking spot &amp; get back to it</td><td>Location, Camera (optional photo of the spot), Notifications (optional timer)</td></tr>
+<tr><td>Nomes do Brasil</td><td>Brazilian baby name explorer, using official 2022 Census (IBGE) data</td><td>None</td></tr>
+<tr><td>AI Camera</td><td>IP camera viewer: multi-camera live view, scheduled recording, on-device object detection</td><td>Notifications (ongoing recording service)</td></tr>
+<tr><td>Obra Calc</td><td>Construction material quantity calculator, sourced from Brazil's official SINAPI cost database</td><td>None</td></tr>
 </table>
+</div>
 
 <h2>What we don't do</h2>
 <ul>
@@ -67,6 +103,9 @@
 <h3>"Modify system settings" (Ringtone Maker)</h3>
 <p>Ringtone Maker requests Android's special "Modify system settings" permission (<code>WRITE_SETTINGS</code>) only to let you set an exported clip as your device's ringtone, notification sound, or alarm sound when you tap that specific button. It is not used for anything else, and Android requires you to explicitly approve this permission via its own system screen before it takes effect.</p>
 
+<h3>IP camera connections (AI Camera)</h3>
+<p>AI Camera connects directly to IP/security cameras on your own local network (the same Wi-Fi as your phone) to show a live view and record to your device's own storage or SD card. Camera addresses and any credentials you enter to connect to them are stored only on your device. Video streams and recordings are processed and stored entirely on-device - AI Camera has no cloud backend, and nothing is uploaded to us or to any server we operate.</p>
+
 <h2>Advertising</h2>
 <p>These Apps are free and supported by ads served through <strong>Google AdMob</strong>. To show ads, Google's AdMob SDK may collect and process the following on our behalf:</p>
 <ul>
@@ -81,7 +120,7 @@
 </div>
 
 <h2>Data we do NOT collect</h2>
-<p>Beyond the ad-serving data described above, we do not collect: your name, email address, contacts, health data, or financial information, in any App. We also do not collect the content of anything you create, record, draw, capture, or scan in these Apps. Local files created by the Apps (recordings, saved signatures, compressed media, dream journal entries, scan history, tarot journal entries, flashcard decks, saved parking spots) are stored only on your own device, in the App's own private storage or wherever you explicitly chose to save them. As noted above, Prayer Times and Parking Reminder use your device's location, but only to compute something shown back to you on-device (prayer times/Qibla direction, or your saved parking spot) - that location data is never sent to us or to any server we operate.</p>
+<p>Beyond the ad-serving data described above, we do not collect: your name, email address, contacts, health data, or financial information, in any App. We also do not collect the content of anything you create, record, draw, capture, or scan in these Apps. Local files created by the Apps (recordings, saved signatures, compressed media, dream journal entries, scan history, tarot journal entries, flashcard decks, saved parking spots, security camera recordings, liked baby names, saved construction material lists) are stored only on your own device, in the App's own private storage or wherever you explicitly chose to save them. As noted above, Prayer Times and Parking Reminder use your device's location, but only to compute something shown back to you on-device (prayer times/Qibla direction, or your saved parking spot) - that location data is never sent to us or to any server we operate.</p>
 
 <h2>Children's privacy</h2>
 <p>Times Tables Practice may be used by children. We do not knowingly collect any personal information from children through any of our Apps. Ad serving in that App follows Google Play's Families Policy as described above. If you are a parent or guardian and believe your child has provided us with personal information, please contact us and we will address it promptly.</p>
