@@ -66,7 +66,7 @@
 <div id="content-en" lang="en" hidden>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Publisher: the1000apps &middot; Last updated: September 16, 2026</p>
+<p class="updated">Publisher: the1000apps &middot; Last updated: September 19, 2026</p>
 
 <p>This privacy policy applies to all Android applications published by <strong>the1000apps</strong> (the "Apps"), listed below. We built these Apps to be simple, offline-first utilities. We do not require an account, do not run our own servers, and do not collect or sell personal information beyond what is described here.</p>
 
@@ -95,15 +95,16 @@
 <tr><td>Handwriting Practice</td><td>Cursive/penmanship practice for teens &amp; adults</td><td>None</td></tr>
 <tr><td>Parking Reminder</td><td>Save your parking spot &amp; get back to it</td><td>Location, Camera (optional photo of the spot), Notifications (optional timer)</td></tr>
 <tr><td>Nomes do Brasil</td><td>Brazilian baby name explorer, using official 2022 Census (IBGE) data</td><td>None</td></tr>
-<tr><td>AI Camera</td><td>IP camera viewer: multi-camera live view, scheduled recording, on-device object detection</td><td>Notifications (ongoing recording service)</td></tr>
+<tr><td>AI Camera</td><td>IP camera viewer: multi-camera live view, scheduled recording, on-device object detection, optional Cloud AI event descriptions (Google Gemini, off by default)</td><td>Notifications (ongoing recording service), Wi-Fi multicast (to find cameras on your network), Battery-optimization exemption (optional, keeps scheduled recording running), Start at boot (resumes scheduled recording)</td></tr>
 <tr><td>Obra Calc</td><td>Construction material quantity calculator, sourced from Brazil's official SINAPI cost database</td><td>None</td></tr>
+<tr><td>Traçado Calc</td><td>Pipe and plate fabrication template calculator, with 1:1 scale PDF output</td><td>None</td></tr>
 </table>
 </div>
 
 <h2>What we don't do</h2>
 <ul>
 <li>We don't require you to create an account or sign in.</li>
-<li>We don't operate our own backend servers, and none of the Apps upload your photos, recordings, drawings, or documents anywhere - processing happens on your device, and files stay on your device unless you explicitly use the Apps' own "share" or "save" action to send them somewhere yourself.</li>
+<li>We don't operate our own backend servers, and none of the Apps upload your photos, recordings, drawings, or documents anywhere - processing happens on your device, and files stay on your device unless you explicitly use the Apps' own "share" or "save" action to send them somewhere yourself. The one optional exception is AI Camera's Cloud AI feature, which is off by default and is described below.</li>
 <li>We don't sell your data to anyone.</li>
 </ul>
 
@@ -116,8 +117,9 @@
 <h3>"Modify system settings" (Ringtone Maker)</h3>
 <p>Ringtone Maker requests Android's special "Modify system settings" permission (<code>WRITE_SETTINGS</code>) only to let you set an exported clip as your device's ringtone, notification sound, or alarm sound when you tap that specific button. It is not used for anything else, and Android requires you to explicitly approve this permission via its own system screen before it takes effect.</p>
 
-<h3>IP camera connections (AI Camera)</h3>
-<p>AI Camera connects directly to IP/security cameras on your own local network (the same Wi-Fi as your phone) to show a live view and record to your device's own storage or SD card. Camera addresses and any credentials you enter to connect to them are stored only on your device. Video streams and recordings are processed and stored entirely on-device - AI Camera has no cloud backend, and nothing is uploaded to us or to any server we operate.</p>
+<h3>IP camera connections and optional Cloud AI (AI Camera)</h3>
+<p>AI Camera connects directly to IP/security cameras on your own local network (the same Wi-Fi as your phone) to show a live view and record to your device's own storage or SD card. Camera addresses and any credentials you enter to connect to them are stored only on your device. Video streams and recordings are processed and stored entirely on-device - AI Camera has no cloud backend, and nothing is uploaded to us or to any server we operate. To find cameras on your network it uses Wi-Fi multicast; to keep scheduled recording running it can ask you to exempt the App from battery optimization, and it can resume the recording service after the device restarts.</p>
+<p><strong>Optional Cloud AI (off by default).</strong> AI Camera has an optional feature that describes a detected event in one sentence. It only works if you add your own Google Gemini API key and then turn the feature on for a specific camera. When you do, a single still photo from a detected event on that camera is sent over the internet, directly from your device, to Google's Gemini service (<code>generativelanguage.googleapis.com</code>), and Google's own terms and privacy policy apply to it. The photo and the description are not sent to us or to any server we operate. Your API key is stored encrypted on your device (Android Keystore) and is sent only to Google with each request. The App limits how many of these requests it makes per day. Live view, recording and on-device object detection work the same with this feature off, and you can turn it off for a camera, or remove your key, at any time.</p>
 
 <h2>Advertising</h2>
 <p>These Apps are free and supported by ads served through <strong>Google AdMob</strong>. To show ads, Google's AdMob SDK may collect and process the following on our behalf:</p>
@@ -126,7 +128,9 @@
 <li>Coarse device and app information (device model, OS version, app version, general region) used for ad delivery and fraud prevention</li>
 <li>Ad interaction data (impressions, clicks) used for ad performance measurement</li>
 </ul>
-<p>We do not control how Google collects or uses this data beyond what's needed to serve ads in the App. You can review Google's own practices at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>, and see AdMob's specific data disclosure at <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a>. You can opt out of personalized/interest-based advertising in your device's Settings &gt; Google &gt; Ads, or by resetting/deleting your advertising ID.
+<p>We do not control how Google collects or uses this data beyond what's needed to serve ads in the App. You can review Google's own practices at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>, and see AdMob's specific data disclosure at <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a>. You can opt out of personalized/interest-based advertising in your device's Settings &gt; Google &gt; Ads, or by resetting/deleting your advertising ID.</p>
+
+<p>Some Apps (Nomes do Brasil, AI Camera, Obra Calc and Traçado Calc) use Google's <strong>User Messaging Platform</strong> to show a consent form before ads are requested where the law requires it (for example, in the European Economic Area and the United Kingdom). You can change or withdraw your choice later through the App's consent options, where offered, or by resetting your advertising ID in your device settings.</p>
 
 <div class="note">
 <strong>Times Tables Practice</strong> is designed for children practicing multiplication. In line with Google Play's Families Policy, ads shown in that specific App are served in a non-personalized, child-appropriate configuration - no ad personalization based on user profiles or cross-app behavior, and no ad formats designed for adult audiences. If you believe personalized ads are appearing in this App, please contact us using the details below.
@@ -139,7 +143,7 @@
 <p>Times Tables Practice may be used by children. We do not knowingly collect any personal information from children through any of our Apps. Ad serving in that App follows Google Play's Families Policy as described above. If you are a parent or guardian and believe your child has provided us with personal information, please contact us and we will address it promptly.</p>
 
 <h2>Data security</h2>
-<p>Since none of the Apps transmit your files or content to any server we operate, the primary security boundary is your own device. We recommend keeping your device's OS updated and using a screen lock.</p>
+<p>Since none of the Apps transmit your files or content to any server we operate, the primary security boundary is your own device (the only exception is the optional AI Camera Cloud AI feature, which sends a photo to Google only if you turn it on, as described above). We recommend keeping your device's OS updated and using a screen lock.</p>
 
 <h2>Changes to this policy</h2>
 <p>We may update this policy as the Apps evolve. Material changes will be reflected by updating the "Last updated" date above. Continued use of an App after a change means you accept the updated policy.</p>
@@ -152,7 +156,7 @@
 <div id="content-pt" lang="pt-BR" hidden>
 
 <h1>Política de Privacidade</h1>
-<p class="updated">Publicado por: the1000apps &middot; Última atualização: 16 de setembro de 2026</p>
+<p class="updated">Publicado por: the1000apps &middot; Última atualização: 19 de setembro de 2026</p>
 
 <p>Esta política de privacidade se aplica a todos os aplicativos Android publicados pela <strong>the1000apps</strong> (os "Apps"), listados abaixo. Construímos esses Apps para serem utilitários simples, que funcionam offline. Não exigimos conta, não operamos servidores próprios, e não coletamos nem vendemos informação pessoal além do que está descrito aqui.</p>
 
@@ -181,15 +185,16 @@
 <tr><td>Handwriting Practice</td><td>Prática de caligrafia cursiva para adolescentes e adultos</td><td>Nenhuma</td></tr>
 <tr><td>Parking Reminder</td><td>Salvar onde você estacionou e te ajudar a voltar até lá</td><td>Localização, Câmera (foto opcional do local), Notificações (timer opcional)</td></tr>
 <tr><td>Nomes do Brasil</td><td>Explorador de nomes de bebê brasileiros, com dados oficiais do Censo 2022 (IBGE)</td><td>Nenhuma</td></tr>
-<tr><td>AI Camera</td><td>Visualizador de câmeras IP: visão ao vivo multi-câmera, gravação agendada, detecção de objetos direto no aparelho</td><td>Notificações (serviço de gravação em segundo plano)</td></tr>
+<tr><td>AI Camera</td><td>Visualizador de câmeras IP: visão ao vivo multi-câmera, gravação agendada, detecção de objetos direto no aparelho, descrição de eventos por IA na nuvem opcional (Google Gemini, desligada por padrão)</td><td>Notificações (serviço de gravação em segundo plano), Multicast Wi-Fi (para encontrar câmeras na sua rede), Isenção da otimização de bateria (opcional, mantém a gravação agendada funcionando), Iniciar com o aparelho (retoma a gravação agendada)</td></tr>
 <tr><td>Obra Calc</td><td>Calculadora de quantidade de material de obra, com base na tabela oficial do SINAPI</td><td>Nenhuma</td></tr>
+<tr><td>Traçado Calc</td><td>Calculadora de gabaritos de caldeiraria (tubo e chapa), com PDF em escala 1:1</td><td>Nenhuma</td></tr>
 </table>
 </div>
 
 <h2>O que não fazemos</h2>
 <ul>
 <li>Não exigimos que você crie uma conta ou faça login.</li>
-<li>Não operamos servidores próprios, e nenhum dos Apps envia suas fotos, gravações, desenhos ou documentos para lugar nenhum - o processamento acontece no seu aparelho, e os arquivos ficam no seu aparelho, a menos que você mesmo use a ação de "compartilhar" ou "salvar" do próprio App para enviá-los a algum lugar.</li>
+<li>Não operamos servidores próprios, e nenhum dos Apps envia suas fotos, gravações, desenhos ou documentos para lugar nenhum - o processamento acontece no seu aparelho, e os arquivos ficam no seu aparelho, a menos que você mesmo use a ação de "compartilhar" ou "salvar" do próprio App para enviá-los a algum lugar. A única exceção opcional é o recurso de IA na nuvem do AI Camera, que vem desligado por padrão e é descrito abaixo.</li>
 <li>Não vendemos seus dados para ninguém.</li>
 </ul>
 
@@ -202,8 +207,9 @@
 <h3>"Modificar configurações do sistema" (Ringtone Maker)</h3>
 <p>O Ringtone Maker solicita a permissão especial do Android "Modificar configurações do sistema" (<code>WRITE_SETTINGS</code>) só para permitir que você defina um trecho exportado como toque, som de notificação ou som de alarme do seu aparelho, quando você toca nesse botão específico. Ela não é usada para mais nada, e o Android exige que você aprove essa permissão explicitamente pela própria tela do sistema antes que ela tenha efeito.</p>
 
-<h3>Conexões com câmeras IP (AI Camera)</h3>
-<p>O AI Camera se conecta diretamente a câmeras IP/de segurança na sua própria rede local (o mesmo Wi-Fi do seu celular) para mostrar uma visão ao vivo e gravar no armazenamento do próprio aparelho ou no cartão SD. Endereços de câmera e quaisquer credenciais que você digitar para se conectar a elas ficam salvos só no seu aparelho. Os streams de vídeo e as gravações são processados e armazenados inteiramente no aparelho - o AI Camera não tem backend na nuvem, e nada é enviado para nós ou para qualquer servidor que operamos.</p>
+<h3>Conexões com câmeras IP e IA na nuvem opcional (AI Camera)</h3>
+<p>O AI Camera se conecta diretamente a câmeras IP/de segurança na sua própria rede local (o mesmo Wi-Fi do seu celular) para mostrar uma visão ao vivo e gravar no armazenamento do próprio aparelho ou no cartão SD. Endereços de câmera e quaisquer credenciais que você digitar para se conectar a elas ficam salvos só no seu aparelho. Os streams de vídeo e as gravações são processados e armazenados inteiramente no aparelho - o AI Camera não tem backend na nuvem, e nada é enviado para nós ou para qualquer servidor que operamos. Para encontrar câmeras na sua rede ele usa multicast Wi-Fi; para manter a gravação agendada funcionando ele pode pedir que você isente o App da otimização de bateria, e pode retomar o serviço de gravação depois que o aparelho reinicia.</p>
+<p><strong>IA na nuvem opcional (desligada por padrão).</strong> O AI Camera tem um recurso opcional que descreve um evento detectado em uma frase. Ele só funciona se você adicionar a sua própria chave de API do Google Gemini e depois ligar o recurso para uma câmera específica. Quando você faz isso, uma única foto de um evento detectado nessa câmera é enviada pela internet, diretamente do seu aparelho, para o serviço Gemini do Google (<code>generativelanguage.googleapis.com</code>), e os termos e a política de privacidade do próprio Google se aplicam a ela. A foto e a descrição não são enviadas para nós nem para qualquer servidor que operamos. Sua chave de API fica guardada criptografada no seu aparelho (Android Keystore) e é enviada só para o Google a cada requisição. O App limita quantas dessas requisições faz por dia. A visão ao vivo, a gravação e a detecção de objetos no aparelho funcionam igual com esse recurso desligado, e você pode desligá-lo para uma câmera, ou remover sua chave, a qualquer momento.</p>
 
 <h2>Publicidade</h2>
 <p>Esses Apps são gratuitos e mantidos por anúncios veiculados pelo <strong>Google AdMob</strong>. Para exibir anúncios, o SDK do AdMob do Google pode coletar e processar, em nosso nome:</p>
@@ -212,7 +218,9 @@
 <li>Informações gerais do aparelho e do app (modelo do aparelho, versão do sistema, versão do app, região aproximada), usadas para entrega de anúncios e prevenção de fraude</li>
 <li>Dados de interação com anúncios (impressões, cliques), usados para medir desempenho</li>
 </ul>
-<p>Não controlamos como o Google coleta ou usa esses dados além do necessário para exibir anúncios no App. Você pode conferir as práticas do próprio Google em <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>, e ver a divulgação de dados específica do AdMob em <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a>. Você pode desativar a publicidade personalizada/por interesse em Configurações &gt; Google &gt; Anúncios do seu aparelho, ou redefinindo/excluindo seu identificador de publicidade.
+<p>Não controlamos como o Google coleta ou usa esses dados além do necessário para exibir anúncios no App. Você pode conferir as práticas do próprio Google em <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>, e ver a divulgação de dados específica do AdMob em <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a>. Você pode desativar a publicidade personalizada/por interesse em Configurações &gt; Google &gt; Anúncios do seu aparelho, ou redefinindo/excluindo seu identificador de publicidade.</p>
+
+<p>Alguns Apps (Nomes do Brasil, AI Camera, Obra Calc e Traçado Calc) usam a <strong>User Messaging Platform</strong> do Google para mostrar um formulário de consentimento antes de solicitar anúncios, onde a lei exige (por exemplo, no Espaço Econômico Europeu e no Reino Unido). Você pode alterar ou retirar sua escolha depois pelas opções de consentimento do App, onde estiverem disponíveis, ou redefinindo seu identificador de publicidade nas configurações do aparelho.</p>
 
 <div class="note">
 <strong>Times Tables Practice</strong> foi feito para crianças praticando tabuada. De acordo com a Política para Famílias do Google Play, os anúncios exibidos nesse App específico são veiculados em uma configuração não personalizada e apropriada para crianças - sem personalização de anúncio baseada em perfil de usuário ou comportamento entre apps, e sem formatos de anúncio voltados para público adulto. Se você acredita que anúncios personalizados estão aparecendo nesse App, entre em contato conosco pelos dados abaixo.
@@ -225,7 +233,7 @@
 <p>O Times Tables Practice pode ser usado por crianças. Não coletamos intencionalmente nenhuma informação pessoal de crianças em nenhum dos nossos Apps. A veiculação de anúncios nesse App segue a Política para Famílias do Google Play, como descrito acima. Se você é pai, mãe ou responsável e acredita que seu filho nos forneceu informação pessoal, entre em contato conosco e trataremos o caso prontamente.</p>
 
 <h2>Segurança dos dados</h2>
-<p>Como nenhum dos Apps transmite seus arquivos ou conteúdo para qualquer servidor que operamos, a principal fronteira de segurança é o seu próprio aparelho. Recomendamos manter o sistema do seu aparelho atualizado e usar bloqueio de tela.</p>
+<p>Como nenhum dos Apps transmite seus arquivos ou conteúdo para qualquer servidor que operamos, a principal fronteira de segurança é o seu próprio aparelho (a única exceção é o recurso opcional de IA na nuvem do AI Camera, que só envia uma foto ao Google se você o ligar, como descrito acima). Recomendamos manter o sistema do seu aparelho atualizado e usar bloqueio de tela.</p>
 
 <h2>Mudanças nesta política</h2>
 <p>Podemos atualizar esta política conforme os Apps evoluem. Mudanças relevantes serão refletidas atualizando a data de "Última atualização" acima. Continuar usando um App depois de uma mudança significa que você aceita a política atualizada.</p>
